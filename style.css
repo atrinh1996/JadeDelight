@@ -1,0 +1,114 @@
+/* Styling for Jade delight order and receipt pages */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{background-color: #ececec; font-size: 16px;}
+header{
+    background-image: url("images/hanxiao-ZBBNIXVOC-c-unsplash.jpg");
+    padding-top: 100px;
+}
+
+#res-name, #order-head{text-align: center; line-height: 2;}
+#res-name{padding:50px}
+#order-head{text-align: center;}
+h1{font-family:'Satisfy', cursive; font-size: 50px;}
+.container, .block, td select, input[type=submit]{margin: auto;}
+.block, .elem, .optional-display{padding: 10px;}
+td select{display: block;}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+#error-order{
+    display: block;
+    color: #ff0000;
+    line-height: 1.5;
+    border: 2px #ff0000 solid;
+    background-color: #ffdddd;
+    font-style: italic;
+    border-radius: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.required{color: #ff0000;font-weight: bold;}
+.required input{border: 1px solid #ff0000;}
+
+input[type=submit]{
+    font-size: 16px;
+    font-weight: bold;
+    border-width: 2px;
+    border-color: #000000;
+    border-radius: 25px;
+    padding: 10px;
+}
+input[type=submit]:hover{opacity: 0.6;}
+
+
+
+/* Receipt page specific styling */
+#receipt{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+}
+.cookie{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+#totalCosts, #cost, #order{text-align:left;flex-grow: 1;}
+#display{text-align:right;flex-grow: 1;}
+#totalCosts {padding-left: 10px;}
+#receipt ul{list-style: none;}
+#receipt li{border-bottom: 1px dotted #000;line-height: 1.5;}
+#receipt p{text-align: center;}
+
+
+/* Footer Styling */
+#main-footer{
+    background-color: rgb(14, 77, 14);
+    color: #000000;
+    padding: 50px;
+}
+
+#main-footer p{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#main-footer ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#main-footer li img{
+    width:30px;
+    height:30px;
+    margin-left:5px;
+    margin-right:5px;
+}
+#main-footer a:hover{opacity: 0.5;}
+
+
+/* Mobile styling */
+@media(max-width:600px) {
+    body, input, select{font-size: 18px;}
+    .container{width:100%;}
+    .block{padding:0; margin:0;}
+    input[type=text]{display: flex; width: 100%;}
+    input[type=radio]{margin-bottom: 20px;}
+    input[name=cost]{display: inline; width: 100px;}
+    .block input[type=submit]{display: flex; margin-bottom: 20px;}
+    table{width: 100%;}
+    tr td{padding-bottom: 20px;}
+    #receipt{width:100%; padding-left:10px; padding-right: 10px;}
+}
